@@ -3,7 +3,23 @@
 let util = require('util');
 let Client = require('krpc-node');
 let hostAddress = process.argv[2];
-let client = Client({rpc: {host: hostAddress},stream: {host: hostAddress}});
+let options = {
+  rpc: {
+        protocol: 'ws',
+        host: hostAddress,
+        port: '50000',
+        wsProtocols: null,
+        wsOptions: null
+    },
+    stream: {
+        protocol: 'ws',
+        host: hostAddress,
+        port: '50001',
+        wsProtocols: null,
+        wsOptions: null
+    }
+};
+let client = Client(options);
 let game = {};
 
 client.rpc.on('open', function (event) {
