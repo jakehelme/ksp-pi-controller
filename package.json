@@ -1,0 +1,29 @@
+{
+  "name": "ksp-pi-controller",
+  "version": "0.0.1",
+  "description": "Raspberry Pi Controller for Kerbal Space Program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakehelme/ksp-pi-controller.git"
+  },
+  "keywords": [
+    "Raspberry",
+    "Pi",
+    "KSP",
+    "Kerbal",
+    "Controller"
+  ],
+  "author": "Jake Helme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakehelme/ksp-pi-controller/issues"
+  },
+  "homepage": "https://github.com/jakehelme/ksp-pi-controller#readme",
+  "dependencies": {
+    "krpc-node": "github:exigentcoder/krpc-node#multi-stream"
+  }
+}
