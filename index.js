@@ -29,8 +29,8 @@ let client = Client(options);
 let game = {};
 
 client.rpc.on('open', function (event) {
-  client.on('message', getActiveVesselComplete);
-  client.send(client.services.spaceCenter.getActiveVessel());
+  client.rpc.on('message', getActiveVesselComplete);
+  client.rpc.send(client.services.spaceCenter.getActiveVessel());
 });
 
 client.rpc.on('error', function (err) {
