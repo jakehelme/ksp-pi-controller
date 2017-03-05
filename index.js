@@ -91,6 +91,7 @@ board.on("ready", function () {
   var led = new five.Led("P1-35");
   var toggle = new five.Switch("P1-7");
   let isOpen;
+  led.off();
 
   board.repl.inject({
     toggle: toggle,
@@ -105,7 +106,6 @@ board.on("ready", function () {
     if (isOpen) {
       isOpen = false;
       led.off();
-
     }
   }
 
